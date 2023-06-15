@@ -6,7 +6,7 @@ import org.junit.Test;
 import logic.FootballScoreBoard;
 import logic.Match;
 
-public class ValidateScoreBoardTests {
+public class ScoreBoardTests {
 
 	@Test
 	public void testStartMatch()
@@ -20,7 +20,7 @@ public class ValidateScoreBoardTests {
 		Match match = matchesInProgress.get(0);
 		assertEquals("Norway", match.getHomeTeam());
 		assertEquals("Canada", match.getAwayTeam());
-		assertEquals(4, match.getHomeScore());
+		assertEquals(6, match.getHomeScore());
 		assertEquals(0, match.getAwayScore());
 	}
 

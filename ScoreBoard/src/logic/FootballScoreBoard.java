@@ -3,7 +3,7 @@ import java.util.*;
 
 public class FootballScoreBoard
 {
-	public static Integer matchId = 0;
+	public static Integer matchId = 0;             
     private Map<Integer, Match> matches;
     private List<Match> inProgressMatches;
 
@@ -20,9 +20,14 @@ public class FootballScoreBoard
      */
     public void startMatch(String homeTeam, String awayTeam)
     {
-        Match match = new Match(homeTeam, awayTeam ,++matchId);
-        matches.put(match.getMatchId(), match);
-        inProgressMatches.add(match);
+    	if((homeTeam != null && homeTeam.length() > 0) && (awayTeam != null && awayTeam.length() > 0))
+    	{
+	        Match match = new Match(homeTeam, awayTeam ,++matchId);
+	        matches.put(match.getMatchId(), match);
+	        inProgressMatches.add(match);
+    	}
+    	else
+    		System.err.print("Cannot start the match. Home Team/Away Team name is NULL");
     }
 
     /**
@@ -42,7 +47,7 @@ public class FootballScoreBoard
     }
 
     /**
-     * This function is responsible to end the match - 
+     * This function is responsible to end the match and remove the match from inprogress match list 
      * @param matchId
      */
     public void finishMatch(int matchId)
@@ -66,31 +71,7 @@ public class FootballScoreBoard
         Collections.sort(inProgressMatches, new MatchComparator());
         
         return inProgressMatches;
-    }
-    
-    public static void main(String a[])
-    {
-    	FootballScoreBoard sb = new FootballScoreBoard();
-    	sb.startMatch("Mexico", "Canada");
-    	sb.startMatch("Spain", "Brazil");
-    	sb.startMatch("Germany", "France");
-    	sb.startMatch("Uruguay", "Italy");
-    	sb.startMatch("Argentina", "Australia");    	
-    	
-    	sb.updateScore(5, 3, 1);
-    	sb.updateScore(4, 6, 6);
-    	sb.updateScore(3, 2, 2);
-    	sb.updateScore(2, 10, 2);
-    	sb.updateScore(0, 0, 5);
-    	
-    	//s1.finishMatch(0);
-    	
-    	List<Match> l1= sb.getMatchesInProgress();
-    	for(Match m : l1)
-    	{
-    		System.out.println(m.getMatchId() + " " + m.getHomeTeam() + " " + m.getHomeScore() + " - " + m.getAwayTeam() + " " + m.getAwayScore());
-    	}    	
-    }
+    }     
 }
 
 /**

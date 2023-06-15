@@ -8,7 +8,7 @@ public class Match
    private String homeTeam;   	 //Home Team Name
    private String awayTeam; 	 //Away Team Name
    private int homeTeamScore;	 //Home Team Score
-   private int awayTeamScore;	 //Away Team Score
+   private int awayTeamScore;	 //Away Team Score 
 
    public Match(String homeTeam, String awayTeam, int id)
    {

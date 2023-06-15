@@ -1,7 +1,8 @@
+package logic;
 /** 
  *POJO Class to represent a Football Match
  */
-class Match
+public class Match
 {
    private int matchId;      	  //Unique identifier for match
    private String homeTeam;   	 //Home Team Name

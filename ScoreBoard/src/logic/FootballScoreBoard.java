@@ -10,7 +10,7 @@ public class FootballScoreBoard
     public FootballScoreBoard() 
     {
         matches = new HashMap<>();
-        inProgressMatches = new ArrayList<>();
+        inProgressMatches = new ArrayList<>(); 
     }
 
     /**

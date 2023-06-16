@@ -72,6 +72,25 @@ public class FootballScoreBoard
         
         return inProgressMatches;
     }     
+    
+    
+    public void displayMatchSummary(List<Match> matchList)
+    {    	
+    	if(matchList.size() > 0)
+    	{
+	    	System.out.println("------------IN PROGRESS MATCHES-----------");    	
+	    	
+	    	int index = 1;    	
+	    	for(Match m : matchList)
+	    	{
+	    		System.out.println(index++ + " " + m.getHomeTeam() + " " + m.getHomeScore() + " - " + m.getAwayTeam() + " " + m.getAwayScore());
+	    	}    	
+	    	System.out.println("-------------------------------------------");
+    	}
+    	else
+    		System.out.println("Currently no matches found.");
+    	
+    }
 }
 
 /**

@@ -30,13 +30,14 @@ public class ScoreBoardTests {
 	{
 		FootballScoreBoard scoreboard = new FootballScoreBoard();
 		scoreboard.startMatch("Spain", "Brazil");
+		scoreboard.startMatch("Argentina", "Australia"); 
 		
 		List<Match> matchesInProgress = scoreboard.getMatchesInProgress();
 		
 		Match match = matchesInProgress.get(0);
 		
 		scoreboard.updateScore(match.getMatchId(), 2, 1);     
-		scoreboard.updateScore(4, 2, 1); 						
+		scoreboard.updateScore(2, 2, 1); 						
 		
 		assertEquals(2, match.getHomeScore());       
 		assertEquals(1, match.getAwayScore());		  
@@ -59,7 +60,5 @@ public class ScoreBoardTests {
 		matchesInProgress = scoreboard.getMatchesInProgress();		
 		assertEquals(0, matchesInProgress.size());
 	}
-
-
 
 }

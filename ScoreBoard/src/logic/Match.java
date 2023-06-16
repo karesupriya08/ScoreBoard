@@ -10,8 +10,7 @@ public class Match
    private int homeTeamScore;	 //Home Team Score
    private int awayTeamScore;	 //Away Team Score 
 
-   public Match(String homeTeam, String awayTeam, int id)
-   {
+   public Match(String homeTeam, String awayTeam, int id)   {
        this.matchId = id;
        this.homeTeam = homeTeam;
        this.awayTeam = awayTeam;
@@ -19,8 +18,7 @@ public class Match
        this.awayTeamScore = 0;
    }
 
-   public Integer getMatchId() 
-   {
+   public Integer getMatchId() {
        return matchId;
    }    
  
@@ -57,15 +55,13 @@ public class Match
 	}
 
 	//Method to update score of both the teams(Home Team and Away team)
-	public void updateScore(int homeScore, int awayScore) 
-   {
+	public void updateScore(int homeScore, int awayScore)    {
        this.homeTeamScore = homeScore;
        this.awayTeamScore = awayScore;
    }
 
 	//Method to calculate score of both the teams(Home Team and Away team)
-   public int getTotalScore() 
-   {
+   public int getTotalScore()    {
        return homeTeamScore + awayTeamScore;
    }      
 }

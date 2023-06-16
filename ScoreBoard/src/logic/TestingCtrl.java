@@ -28,22 +28,14 @@ public class TestingCtrl
     	sb.updateScore(4, 6, 6);
     	sb.updateScore(5, 3, 1);
     	sb.updateScore(6, 4, 1);
-    	/*-----------------------------------*/
+    	/*------------------------------------*/
     	
     	sb.finishMatch(10);        //Finish Match
     	sb.finishMatch(6);   
     	
-    	/*---------Summary of matches in progress---------*/    	
+    	//Display Summary of matches in progress    	
+    	sb.displayMatchSummary(sb.getMatchesInProgress());    	
     	
-    	List<Match> l1= sb.getMatchesInProgress();
-    	System.out.println("------------IN PROGRESS MATCHES-----------");    	
     	
-    	int index = 1;    	
-    	for(Match m : l1)
-    	{
-    		System.out.println(index++ + " " + m.getHomeTeam() + " " + m.getHomeScore() + " - " + m.getAwayTeam() + " " + m.getAwayScore());
-    	}    	
-    	System.out.println("-------------------------------------------");
-    	/*-----------------------------------------------*/
     }
 }

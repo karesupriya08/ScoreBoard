@@ -33,6 +33,8 @@ Match instance variables:
 - homeTeamScore : The score of the home team (int).
 - awayTeamScore : The score of the away team(int).
 
+###MatchComparator class - 
+Implements the Comparator interface. It is used to compare matches based on their total score and match ID.
 
 ### TestingCtrl class - 
 TestingCtrl class provides main() to check the implementation of FootballScoreBoard class.

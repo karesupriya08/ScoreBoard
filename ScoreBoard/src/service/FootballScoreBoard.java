@@ -41,7 +41,7 @@ public class FootballScoreBoard
     public void updateScore(int matchId, int homeScore, int awayScore)
     {    	
         Match match = matches.get(matchId);
-        if (match != null) {
+        if (Optional.ofNullable(match).isPresent()) {
             match.updateScore(homeScore, awayScore);
         }
         else
@@ -55,7 +55,7 @@ public class FootballScoreBoard
     public void finishMatch(int matchId)
     {
         Match match = matches.get(matchId);
-        if (match != null) 
+        if (Optional.ofNullable(match).isPresent()) 
         {
         	inProgressMatches.remove(match);
             matches.remove(matchId);

@@ -1,12 +1,12 @@
-package logic;
+package main;
 
-import java.util.List;
+import service.FootballScoreBoard;
 
 /**
  * Testing controller to test the Football Score Board Library Implementation
  *
  */
-public class TestingCtrl
+public class ScoreBoardTesting
 {
 	 public static void main(String a[])
     {
@@ -19,6 +19,7 @@ public class TestingCtrl
     	sb.startMatch("Germany", "France");
     	sb.startMatch("Uruguay", "Italy");
     	sb.startMatch("Argentina", "Australia"); 
+    	sb.startMatch(null, null); 
     	/*----------------------------------------*/
     	
     	/*---------Update Match Score---------*/

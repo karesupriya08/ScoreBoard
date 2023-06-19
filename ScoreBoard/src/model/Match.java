@@ -1,4 +1,4 @@
-package logic;
+package model;
 
 /**
  * POJO Class to represent a Football Match

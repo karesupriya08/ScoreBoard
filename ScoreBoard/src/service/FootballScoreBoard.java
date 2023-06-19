@@ -1,5 +1,7 @@
-package logic;
+package service;
 import java.util.*;
+import helper.MatchComparator;
+import model.Match;
 
 public class FootballScoreBoard
 {
@@ -20,7 +22,7 @@ public class FootballScoreBoard
      */
     public void startMatch(String homeTeam, String awayTeam)
     {
-    	if((homeTeam != null && homeTeam.length() > 0) && (awayTeam != null && awayTeam.length() > 0))
+    	if((Optional.ofNullable(homeTeam).isPresent() && homeTeam.length() > 0) && (Optional.ofNullable(awayTeam).isPresent() && awayTeam.length() > 0))
     	{
 	        Match match = new Match(homeTeam, awayTeam ,++matchId);
 	        matches.put(match.getMatchId(), match);
@@ -90,24 +92,5 @@ public class FootballScoreBoard
     	else
     		System.out.println("Currently no matches found.");
     	
-    }
-}
-
-/**
- * MatchComparator is custom comparator class for sorting the recent matches
- * ordered by their total score
- *
- */
-class MatchComparator implements Comparator<Match> 
-{
-    public int compare(Match m1, Match m2) 
-    {
-        int scoreDiff = m2.getTotalScore() - m1.getTotalScore();
-        
-        if (scoreDiff != 0) {
-            return scoreDiff;
-        } else {
-            return m2.getMatchId().compareTo(m1.getMatchId());
-        }
     }
 }

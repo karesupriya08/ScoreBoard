@@ -3,8 +3,9 @@ package test;
 import static org.junit.Assert.*;
 import java.util.List;
 import org.junit.Test;
-import logic.FootballScoreBoard;
-import logic.Match;
+
+import model.Match;
+import service.FootballScoreBoard;
 
 public class ScoreBoardTests {
 

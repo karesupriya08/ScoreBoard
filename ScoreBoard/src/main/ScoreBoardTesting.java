@@ -1,6 +1,6 @@
 package main;
 
-import service.FootballScoreBoard;
+import main.service.FootballScoreBoard;
 
 /**
  * Testing controller to test the Football Score Board Library Implementation

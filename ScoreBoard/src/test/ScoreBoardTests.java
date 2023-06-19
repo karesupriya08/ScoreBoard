@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 import java.util.List;
 import org.junit.Test;
 
-import model.Match;
-import service.FootballScoreBoard;
+import main.model.Match;
+import main.service.FootballScoreBoard;
 
 public class ScoreBoardTests {
 

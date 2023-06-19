@@ -1,7 +1,8 @@
-package helper;
+package main.helper;
 
 import java.util.Comparator;
-import model.Match;
+
+import main.model.Match;
 
 
 /**

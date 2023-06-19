@@ -1,4 +1,4 @@
-package model;
+package main.model;
 
 /**
  * POJO Class to represent a Football Match

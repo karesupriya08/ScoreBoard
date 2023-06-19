@@ -1,7 +1,8 @@
-package service;
+package main.service;
 import java.util.*;
-import helper.MatchComparator;
-import model.Match;
+
+import main.helper.MatchComparator;
+import main.model.Match;
 
 public class FootballScoreBoard
 {

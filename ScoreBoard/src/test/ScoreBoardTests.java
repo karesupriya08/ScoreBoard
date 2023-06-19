@@ -22,7 +22,7 @@ public class ScoreBoardTests {
 		Match match = matchesInProgress.get(0);     
 		assertEquals("Norway", match.getHomeTeam());         
 		assertEquals("Canada", match.getAwayTeam());		
-		assertEquals(6, match.getHomeScore());      		
+		assertEquals(6, match.getHomeScore());       		
 		assertEquals(0, match.getAwayScore()); 				
 	}
 	
